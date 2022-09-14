@@ -46,7 +46,7 @@ public class FinalPlayer {
     private void loadAndPlay(VoiceChannel channelToJoin) throws IOException {
         GuildMusicManager musicManager = getGuildAudioPlayer(channelToJoin.getGuild());
 
-        playerManager.loadItem(resource.getFile().getPath(), new AudioLoadResultHandler() {
+        playerManager.loadItem("https://www.youtube.com/watch?v=e6s-OcRXojM", new AudioLoadResultHandler() {
             @Override
             public void trackLoaded(AudioTrack track) {
                 play(channelToJoin.getGuild().getAudioManager(), musicManager, track, channelToJoin);
